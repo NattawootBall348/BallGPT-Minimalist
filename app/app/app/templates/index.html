@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>AI Chatbot</title>
+    <title>BallGPT ProDev Mode</title>
 </head>
-
 <body>
-<h1>Chat with AI</h1>
-<form method="post" action="/chat">
-    <input type="text" name="user_input" placeholder="Say something..." required>
-    <button type="submit">Send</button>
-</form>
-{% if user_input %}
-    <p><b>You:</b> {{ user_input }}</p>
-    <p><b>AI:</b> {{ ai_response }}</p>
-{% endif %}
+    <h1>Chat with BallGPT</h1>
+    <form method="post" action="/chat">
+        <input type="text" name="user_input" placeholder="Say something..." required>
+        <button type="submit">Send</button>
+    </form>
+    {% if user_input %}
+        <p><b>You:</b> {{ '{' }}{{ user_input }}{{ '}' }}</p>
+        <p><b>BallGPT:</b> {{ '{' }}{{ ai_response }}{{ '}' }}</p>
+    {% endif %}
 </body>
-
 </html>
